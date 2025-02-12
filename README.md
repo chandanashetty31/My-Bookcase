@@ -15,12 +15,13 @@ Environment Variables: dotenv <br> <br>
 Clone the repository: <br> git clone https://github.com/your-username/book-management-system.git <br>
 cd book-management-system
 <br>
-Install the required dependencies: npm install <br>
-Set up your PostgreSQL database. You need to create a database and a book and userdata table.
 <br>
+Install the required dependencies: npm install <br> <br>
+Set up your PostgreSQL database. You need to create a database and a book and userdata table.
+<br> <br>
 Create a .env file in the root directory and add your PostgreSQL credentials: <br> 
 database=your-database-name <br> 
-password=your-database-password <br> 
+password=your-database-password <br> <br>
 
 Start the application:
 npm start
