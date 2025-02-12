@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBooks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="books">
+    <main>
+    <header>
+        <h1>Chandana Shetty</h1>
+        <h4>Books I've read!</h4>
+        <p id="head">It's a brief about the books which I have read and save it if you also want to read it. I read some books but <strong> after I finish reading them </strong> I often don't remember some parts of the book ,so overcome this <strong>I have created this website</strong> so that I can keep track of it.</p>
+    </header>
+    <p class="sort">Sorted by <a href="#" id="sort-recent">Recent</a> <a href="#" id="sort-best">Best</a></p>
+   <section id="book-list">
+    <div class="book" data-date="2024-04-13" data-rating="9">
+        <img src="<%= cover %>" alt="" height="150px">
+        <h3><a href="/alchemist"><%= title %>-By <%= author %></a></h3>
+        <br>
+        <p class="intro">It was one was of the best book I have read so far.I recommend you to read it as it is a <strong>fable about following your dreams.</strong></p>
+        <br>
+        <p>It is also available in <a href="https://www.meesho.com/the-alchemist-by-panlo-coelho/p/2n5iu2">Meesho</a> <span><a href="/alchemist">Read my notes</a></span></p>
+        <small>Date of read: 13-04-2024</small> <small>My ratings: <strong>9/10</strong></small>
+    </div>
+    <br>
+    <div class="book" data-date="2024-10-20" data-rating="8">
+        <img src="<%= cover_2 %>" alt="" height="158px" width="100px">
+        <h3><a href="/ikigai"><%= title_2 %>-By <%= author_2 %></a></h3>
+        <br>
+        <p class="intro">I personally liked this book.It is about telling people how to <strong>live long and happily </strong>through which we can apply it in our lives.</p>
+        <br>
+        <p>It is also available in <a href="https://www.meesho.com/ikigai-the-japanese-secret-to-a-long-and-happy-life-by-hector-garcia-francesc-miralles-paperback-english/p/5hlzix">Meesho</a> <span><a href="/ikigai">Read my notes</a></span></p>
+        <small>Date of read: 20-10-2024</small> <small>My ratings: <strong>8/10</strong></small>
+    </div>
+   </section>
+    </main>
+</body>
+<script>
+   
+   document.addEventListener("DOMContentLoaded", function () {
+    const booksContainer = document.getElementById("book-list");
+    const books = Array.from(booksContainer.getElementsByClassName("book"));
+
+    function sortBooks(criteria) {
+        books.sort((a, b) => {
+            if (criteria === "date") {
+                return new Date(b.dataset.date) - new Date(a.dataset.date); // Convert string to Date
+            } else {
+                return Number(b.dataset.rating) - Number(a.dataset.rating); // Convert string to number
+            }
+        });
+
+        books.forEach(book => booksContainer.appendChild(book)); // Reorder
+    }
+
+    document.getElementById("sort-recent").addEventListener("click", function (event) {
+        event.preventDefault();
+        sortBooks("date");
+    });
+
+    document.getElementById("sort-best").addEventListener("click", function (event) {
+        event.preventDefault();
+        sortBooks("rating");
+    });
+});
+</script>
+</html>

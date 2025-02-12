@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#books{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: 25%;
+   
+}
+#head{
+    font-size: 20px;
+}
+header{
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+}
+.sort{
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 20px 0;
+}
+span{
+    margin-left: 50px;
+}
+img{
+    float: left;
+    margin-right: 10px;
+}
+h3{
+    text-align: center;
+}
+.book p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.intro{
+    font-size: 20px;
+}
+.book{
+    margin: 80px 0 100px 0;
+}
+.small{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 20px;
+    font-family:monospace;
+    font-size: 17px;
+}
+#notes{
+    text-align: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+.shortNotes{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+}
